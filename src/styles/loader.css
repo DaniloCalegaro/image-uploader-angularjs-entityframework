@@ -1,8 +1,8 @@
 .loader{
   display: block;
   position: relative;
-  height: 12px;
-  width: 100%;
+  height: 0.75rem;
+  width: 25rem;
   background-color: var(--bs-light-border-subtle);
   border-radius: 10px;
   overflow: hidden;
