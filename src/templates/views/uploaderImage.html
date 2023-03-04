@@ -4,12 +4,25 @@
     <h1 class="fs-3">Envie sua imagem</h1>
     <span class="text-muted">O arquivo deve ser JPEG, PNG,...</span>
   </header>
-  <section class="d-flex flex-column border-dotted rounded-3 p-5 mt-5 mb-4" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Adicione sua imagem">
+  <section 
+    class="d-flex flex-column align-items-center border-dotted rounded-3 p-5 mt-5 mb-4" 
+    file-dropzone="[image/png, image/jpeg, image/gif]"
+    file="image" 
+    file-name="imageFileName" 
+    data-max-file-size="3"
+  >
     <img class="mb-4" height="88" src="src/image/image.svg" alt="imagem simbolica para upload">
     <span class="text-body-tertiary ">Arraste e solte sua imagem aqui</span>
   </section>
-  <section class="d-flex flex-column align-items-center">
+  <form action class="d-flex flex-column align-items-center">
     <span>Ou</span>
-    <button class="btn btn-primary mt-4">Escolha um arquivo</button>
-  </section>
+    <input class="form-control mt-3" type="file" accept="image/*" fileread="uploadme.src">
+    <img ng-src="{{ uploadme.src }}">
+  </form>
+
+  <div class="image-container">
+    <img ng-src={{image}} />
+    <span class="file-name">{{imageFileName}}</span>
+  </div>
+
 </div>
